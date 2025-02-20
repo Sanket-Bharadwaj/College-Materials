@@ -1,4 +1,4 @@
-package geometry; 
+package Q02; 
 
 public class Rectangle {
     // Private attributes

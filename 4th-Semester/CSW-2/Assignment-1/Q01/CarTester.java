@@ -1,4 +1,4 @@
-package CarProject;
+package Q01;
 
 public class CarTester {
     public static void main(String[] args) {

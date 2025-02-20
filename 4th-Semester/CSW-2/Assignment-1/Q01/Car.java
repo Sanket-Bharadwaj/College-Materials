@@ -1,4 +1,4 @@
-package CarProject;
+package Q01;
 
 public class Car {
     private String brand;
