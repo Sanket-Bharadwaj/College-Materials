@@ -1,63 +1,32 @@
-package Q01;
-
+// Car.java
 public class Car {
-    private String brand;
+    // Private fields
+    private String make;
     private String model;
-    private int year;
-    private double speed;
 
-    // Constructor
-    public Car(String brand, String model, int year, double speed) {
-        this.brand = brand;
+    // Parameterized constructor
+    public Car(String make, String model) {
+        this.make = make;
         this.model = model;
-        this.year = year;
-        this.speed = speed;
     }
 
-    // Getters
-    public String getBrand() {
-        return brand;
+    // Getter for make
+    public String getMake() {
+        return make;
     }
 
+    // Getter for model
     public String getModel() {
         return model;
     }
 
-    public int getYear() {
-        return year;
+    // Setter for make
+    public void setMake(String make) {
+        this.make = make;
     }
 
-    public double getSpeed() {
-        return speed;
-    }
-
-    // Setters
-    public void setBrand(String brand) {
-        this.brand = brand;
-    }
-
+    // Setter for model
     public void setModel(String model) {
         this.model = model;
-    }
-
-    public void setYear(int year) {
-        this.year = year;
-    }
-
-    public void setSpeed(double speed) {
-        this.speed = speed;
-    }
-
-    // Method to accelerate
-    public void accelerate(double amount) {
-        speed += amount;
-    }
-
-    // Method to brake
-    public void brake(double amount) {
-        speed -= amount;
-        if (speed < 0) {
-            speed = 0;
-        }
     }
 }
