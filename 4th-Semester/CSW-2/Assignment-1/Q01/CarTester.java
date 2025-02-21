@@ -1,22 +1,29 @@
-package Q01;
-
+// CarTester.java
 public class CarTester {
     public static void main(String[] args) {
-        // Creating a Car object
-        Car myCar = new Car("Toyota", "Camry", 2022, 0);
+        // Instantiate myCar1 with values
+        Car myCar1 = new Car("Toyota", "Corolla");
 
-        // Displaying initial car details
-        System.out.println("Brand: " + myCar.getBrand());
-        System.out.println("Model: " + myCar.getModel());
-        System.out.println("Year: " + myCar.getYear());
-        System.out.println("Speed: " + myCar.getSpeed() + " km/h");
+        // Instantiate myCar2 with null
+        Car myCar2 = new Car(null, null);
 
-        // Accelerate the car
-        myCar.accelerate(50);
-        System.out.println("After acceleration, Speed: " + myCar.getSpeed() + " km/h");
+        // Print initial details of myCar1
+        System.out.println("Initial details of myCar1:");
+        System.out.println("Make: " + myCar1.getMake());
+        System.out.println("Model: " + myCar1.getModel());
 
-        // Apply brake
-        myCar.brake(20);
-        System.out.println("After braking, Speed: " + myCar.getSpeed() + " km/h");
+        // Print initial details of myCar2
+        System.out.println("\nInitial details of myCar2:");
+        System.out.println("Make: " + myCar2.getMake());
+        System.out.println("Model: " + myCar2.getModel());
+
+        // Update myCar2 using setters
+        myCar2.setMake("Honda");
+        myCar2.setModel("Civic");
+
+        // Print updated details of myCar2
+        System.out.println("\nUpdated details of myCar2:");
+        System.out.println("Make: " + myCar2.getMake());
+        System.out.println("Model: " + myCar2.getModel());
     }
 }
