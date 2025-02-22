@@ -1,6 +1,6 @@
 package Q04&Q05;
 
-public class ImageApp{
+public class ImageApp {
     public static void main(String[] args) {
         ImageLibrary imageLibrary = new ImageLibrary(10);
 
