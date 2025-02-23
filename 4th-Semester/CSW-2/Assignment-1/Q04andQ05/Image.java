@@ -15,13 +15,25 @@ public class Image {
         this.colorCode = colorCode;
     }
 
-    public int getImageWidth() { return imageWidth; }
-    public int getImageHeight() { return imageHeight; }
-    public String getColorCode() { return colorCode; }
+    public int getImageWidth() { 
+        return imageWidth; 
+    }
+    public int getImageHeight() { 
+        return imageHeight; 
+    }
+    public String getColorCode() { 
+        return colorCode; 
+    }
 
-    public void setImageWidth(int imageWidth) { this.imageWidth = imageWidth; }
-    public void setImageHeight(int imageHeight) { this.imageHeight = imageHeight; }
-    public void setColorCode(String colorCode) { this.colorCode = colorCode; }
+    public void setImageWidth(int imageWidth) { 
+        this.imageWidth = imageWidth; 
+    }
+    public void setImageHeight(int imageHeight) { 
+        this.imageHeight = imageHeight; 
+    }
+    public void setColorCode(String colorCode) { 
+        this.colorCode = colorCode; 
+    }
 
     public String toString() {
         return "Image [Width: " + imageWidth + ", Height: " + imageHeight + ", Color Code: " + colorCode + "]";
