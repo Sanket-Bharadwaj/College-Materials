@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Q7</title>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   
+   <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 8px;
+        }
+   </style>
+
+   <script>
+        $(document).ready(function() {
+            $(".addRow").click(function(){
+                const name1 = $("#name").val();
+                const reg1 = $("#reg").val();
+                const sec1 = $("#section").val();
+
+                // Ensure all fields are filled
+                if (name1 && reg1 && sec1) {
+                    // Corrected string interpolation using backticks
+                    $("tbody").append(`<tr><td>${name1}</td><td>${reg1}</td><td>${sec1}</td></tr>`);
+
+                    // Clear input fields after adding the row
+                    $("#name").val("");
+                    $("#reg").val("");
+                    $("#section").val("");
+                } else {
+                    alert("Please fill in all fields.");
+                }
+            });
+
+            $(".change-color").click(function() {
+                // Toggle row color by adding/removing a class
+                $("tbody tr").each(function() {
+                    $(this).toggleClass("highlight");
+                });
+            });
+        });
+   </script>
+
+   <style>
+       .highlight {
+           color: yellow;
+       }
+   </style>
+</head>
+<body>
+    <h2>Student Data</h2>
+    
+    <br>
+    <input type="text" id="name" placeholder="Name">
+    <input type="number" id="reg" placeholder="Registration Number">
+    <input type="text" id="section" placeholder="Section">
+
+    <br><br>
+    <button class="addRow">Add Row</button>
+    <button class="change-color">Change Color</button>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Registration Number</th>
+                <th>Section</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Table rows will be added dynamically here -->
+        </tbody>
+    </table>
+</body>
+</html>
