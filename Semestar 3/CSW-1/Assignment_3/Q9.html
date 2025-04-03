@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Q9</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        .modal {
+            display: none;
+            position: fixed; 
+            top: 0; 
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .content { 
+            margin: 15% auto; 
+            padding: 20px; 
+            background: #fff; 
+            width: 300px; 
+            text-align: center;
+        }
+        .close { 
+            cursor: pointer; 
+            float: right; 
+        }
+        #btn { 
+            padding: 10px 20px; 
+            background: #4CAF50; 
+            color: #fff; 
+            cursor: pointer; 
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">Open</button>
+    <div id="modal" class="modal">
+        <div class="content">
+            <span class="close">&times;</span>
+            <p>Custom Popup!</p>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function() {
+            $("#btn").click(function() { $("#modal").fadeIn(); });
+            $(".close, #modal").click(function(e) { 
+                if (e.target == this) $("#modal").fadeOut(); 
+            });
+        });
+    </script>
+</body>
+</html>

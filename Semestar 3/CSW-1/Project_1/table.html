@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Directory</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+        h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #e9ecef;
+            transition: background-color 0.3s;
+        }
+        .addRow {
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+        .addRow:hover {
+            background-color: #0056b3;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm bg-info navbar-dark">
+        <a class="navbar-brand" href="#">Saraswati Sishu Vidyamandir</a>
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home</a>
+            </li>
+            < li class="nav-item">
+                <a class="nav-link" href="#">Academics</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Achievements</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Alumni On Focus</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Placements</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Announcements</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Research</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Admissions</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h2>Student Directory</h2>
+        <input type="text" id="search" class="form-control" placeholder="Search by name">
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Semester</th>
+                    <th>Registration Number</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Rows will be dynamically added here -->
+            </tbody>
+        </table>
+
+        <h3>Add New Student</h3>
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter name">
+        </div>
+        <div class="form-group">
+            <label for="age">Age:</label>
+            <input type="number" class="form-control" id="age" placeholder="Enter age">
+        </div>
+        <div class="form-group">
+            <label for="semester">Semester:</label>
+            <input type="text" class="form-control" id="semester" placeholder="Enter semester">
+        </div>
+        <div class="form-group">
+            <label for="reg">Registration Number:</label>
+            <input type="text" class="form-control" id="reg" placeholder="Enter registration number">
+        </div>
+        <button class="btn btn-primary addRow">Add Student</button>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        $(".addRow").click(function(){
+            const name1 = $("#name").val();
+            const age1 = $("#age").val();
+            const sem1 = $("#semester").val();
+            const reg1 = $("#reg").val();
+
+            if (name1 && age1 && sem1 && reg1) {
+                $("tbody").append(`<tr><td>${name1}</td><td>${age1}</td><td>${sem1}</td><td>${reg1}</td><td><button class="btn btn-danger delete-btn">Delete</button></td></tr>`);
+                $("#name").val("");
+                $("#age").val("");
+                $("#semester").val("");
+                $("#reg").val("");
+            } else {
+                alert("Please fill in all fields.");
+            }
+        });
+
+        $(document).on("click", ".delete-btn", function() {
+            if (confirm("Are you sure you want to delete this student?")) {
+                $(this).closest("tr").remove();
+            }
+        });
+
+        $("#search").on("keyup", function() {
+            var value = $(this).val().toLowerCase();
+            $("tbody tr").filter(function() {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+    });
+    </script>
+</body>
+</html>
