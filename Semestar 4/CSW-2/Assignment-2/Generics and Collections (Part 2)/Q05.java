@@ -1,5 +1,3 @@
-package Assignment2_2;
-import java.util.*;
 /*Create a Book class with member variables id, name, author, and quantity to store 
 details of each issued book. The Book class should include a parameterized 
 constructor. Design a Library class that creates a HashMap of books, where the key is 
@@ -8,6 +6,11 @@ least two Book objects and display the collection of books stored in the HashMap
 Use appropriate methods of the HashMap class to perform the following operations: 
 (a) Check if a particular book name is present on the map. 
 (b) Remove a book entry by deleting the value associated with a specific key. */
+
+
+package Assignment2_2;
+import java.util.*;
+
 class Book{
 	private int id;
     String name;
