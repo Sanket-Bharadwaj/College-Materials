@@ -5,8 +5,6 @@
  file already exists and informs the user, to avoid overwriting any previous content
  */
 
-
-
 package Assignment_IO_FileManagement;
 
 import java.io.File;
@@ -15,7 +13,7 @@ import java.io.IOException;
 import java.time.LocalDate;
 import java.util.Scanner;
 
-public class DiaryEntry {
+public class Q09 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         File file = new File("diary.txt");
@@ -40,4 +38,3 @@ public class DiaryEntry {
         sc.close();
     }
 }
-

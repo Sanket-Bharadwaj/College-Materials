@@ -54,3 +54,76 @@ public class Q14 {
 	        }
     }
 }
+
+
+
+
+
+
+/*
+
+class Node {
+    int key;
+    Node left;
+    Node right;
+
+    Node(int key) {
+        this.key = key;
+        left = null;
+        right = null;
+    }
+}
+
+class BST {
+    Node root;
+
+    BST() {
+        root = null;
+    }
+
+    public void insert(int t) {
+        if (root == null) {
+            root = new Node(t);
+        } else {
+            insertRec(root, t);
+        }
+    }
+
+    private void insertRec(Node current, int t) {
+        if (t < current.key) {
+            if (current.left == null) {
+                current.left = new Node(t);
+            } else {
+                insertRec(current.left, t);
+            }
+        } else {
+            if (current.right == null) {
+                current.right = new Node(t);
+            } else {
+                insertRec(current.right, t);
+            }
+        }
+    }
+
+    public void inorderTraversal(Node node) {
+        if (node != null) {
+            inorderTraversal(node.left);
+            System.out.print(node.key + " ");
+            inorderTraversal(node.right);
+        }
+    }
+
+    public static void main(String[] args) {
+        BST bst = new BST();
+        int[] numbers = {8, 4, 6, 10, 3, 2};
+
+        for (int number : numbers) {
+            bst.insert(number);
+        }
+
+        System.out.println("Inorder Traversal of the BST:");
+        bst.inorderTraversal(bst.root);
+    }
+}
+*/
+
