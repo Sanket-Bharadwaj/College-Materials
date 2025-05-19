@@ -1,0 +1,16 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+    <bean id="cseBranch" class="com.studentenrollmentsystem.CSE">
+        <constructor-arg value="Sanket"/>
+        <constructor-arg value="101"/>
+    </bean>
+
+    <bean id="csitBranch" class="com.studentenrollmentsystem.CSIT">
+        <constructor-arg value="None"/>
+        <constructor-arg value="102"/>
+    </bean>
+
+</beans>
