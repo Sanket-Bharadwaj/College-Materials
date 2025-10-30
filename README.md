@@ -13,4 +13,4 @@ The repository is divided by **semesters**, with each semester containing subjec
 ## ⚠️ Disclaimer  
 This repository is for **educational purposes only**. Feel free to refer to the code, but **avoid direct plagiarism**. Always write and submit your own work with proper understanding.  
 
-Happy Learning! 🚀  
+Happy Learning! 🚀 
